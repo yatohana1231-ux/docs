@@ -19,6 +19,7 @@ https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-conte
 
 - 他にも、gRPC trafficとLambda@Edge の origin request / origin response triggersもサポートされていない。
 - gRPC通信とはGoogleが開発した**高速なAPI通信方式（RPCフレームワーク）**です。
+
 | 項目      | gRPC traffic   | REST traffic |
 | ------- | -------------- | ------------ |
 | 通信方式    | HTTP/2         | HTTP/1.1（主流） |
