@@ -19,5 +19,7 @@ ALB（Aレコード Alias）
 ![CNAMEレコード作成](../assets/aws/ACM_create_CNAME_to_Route53.png)
 3. 証明書が発行されたら ALB を作成
     - HTTPS:443 リスナーに証明書をアタッチする
+    - ALB作成後に、リスナーとルールからルールを追加する
+![ルールの追加](../assets/aws/ELB_create_rule.png)
 4. Route53 に origin.example.com の A(Alias) を作成して ALB に向ける
 5. CloudFront の Origin を origin.example.com に設定し、Origin Protocol Policy を HTTPS Only にする
