@@ -1,9 +1,11 @@
 # AWS構成
+```
 Client
   ↓
 CloudFront
   ├ / → S3
   └ /api → VPC Origin (ALB) → EC2（@Private Subnet）
+```
 
 # 概要
 CloudFront → EC2（@Public Subnet）
@@ -47,10 +49,10 @@ ALBなどのオリジンサーバーがPrivate Subnetに配置され外部に公
 CloudFrontやALBにWAFを導入する、などでさらにセキュリティを強固にできる
 
 # 参考
-- AWSドキュメント
+- AWSドキュメント<br>
 https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/introduction.html
 https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/private-content-vpc-origins.html
 https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-vpc-origins.html
 
-- 分かりやすかった
+- 分かりやすかった<br>
 https://qiita.com/j2-yano/items/3aba0f546820927b70c7
