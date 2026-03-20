@@ -20,6 +20,9 @@ ALB（Aレコード Alias）
 3. 証明書が発行されたら ALB を作成
     - HTTPS:443 リスナーに証明書をアタッチする
     - ALB作成後に、リスナーとルールからルールを追加する
+        - HTTPヘッダーに originverify==key_value を追加する
 ![ルールの追加](../assets/aws/ELB_create_rule.png)
 4. Route53 に origin.example.com の A(Alias) を作成して ALB に向ける
-5. CloudFront の Origin を origin.example.com に設定し、Origin Protocol Policy を HTTPS Only にする
+5. CloudFront に Origin を追加する
+    - origin.example.com に設定し、Origin Protocol Policy を HTTPS Only にする
+    - カスタムヘッダーに ALB で設定した key_value を付与する
